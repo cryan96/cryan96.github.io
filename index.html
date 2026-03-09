@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Christopher W. Ryan, MD — Professor of Medicine, OHSU Knight Cancer Institute. Medical-legal and professional consultation in sarcoma and genitourinary oncology.">
+<title>Christopher W. Ryan, MD | Medical Oncologist · Consultant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#112236;--gold:#9a7c3f;--goldlt:#b8963e;--fog:#f4f1ec;--paper:#faf8f5;--rule:#ddd8d0;--muted:#6b6660;--ink:#1a1a18;--slate:#2c3e50}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7;font-weight:300}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:54px;background:rgba(250,248,245,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+  .nav-name{font-family:'EB Garamond',Georgia,serif;font-size:.92rem;font-weight:500;color:var(--navy);letter-spacing:.02em;text-decoration:none}
+  .nav-links{display:flex;gap:24px;list-style:none}
+  .nav-links a{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);text-decoration:none;font-weight:400;transition:color .2s}
+  .nav-links a:hover,.nav-links a.active{color:var(--navy)}
+
+  /* HERO */
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 54px)}
+  .hero-left{background:var(--navy);padding:64px 48px 64px 40px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+  .hero-left::before{content:'';position:absolute;bottom:-50px;right:-50px;width:260px;height:260px;border:1px solid rgba(154,124,63,.13);border-radius:50%;pointer-events:none}
+  .hero-left::after{content:'';position:absolute;bottom:20px;right:20px;width:185px;height:185px;border:1px solid rgba(154,124,63,.08);border-radius:50%;pointer-events:none}
+  .hero-tag{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--goldlt);margin-bottom:24px}
+  .hero-left h1{font-family:'EB Garamond',Georgia,serif;font-size:clamp(2.2rem,3.2vw,3.2rem);font-weight:300;line-height:1.08;color:#fff;margin-bottom:10px}
+  .hero-creds{font-family:'EB Garamond',Georgia,serif;font-size:.96rem;font-style:italic;color:rgba(255,255,255,.40);margin-bottom:40px;line-height:1.65}
+  .hero-rule{width:40px;height:1px;background:var(--gold);margin-bottom:24px}
+  .hero-desc{font-size:.87rem;color:rgba(255,255,255,.57);max-width:370px;line-height:1.9;margin-bottom:44px}
+  .hero-cta{display:inline-block;background:transparent;border:1px solid rgba(154,124,63,.5);color:var(--goldlt);padding:10px 24px;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;text-decoration:none;align-self:flex-start;transition:background .2s,border-color .2s}
+  .hero-cta:hover{background:rgba(154,124,63,.1);border-color:var(--goldlt)}
+  .hero-right{background:var(--fog);padding:48px 40px 48px 48px;display:flex;flex-direction:column;justify-content:center}
+  .photo-row{display:flex;align-items:center;gap:20px;margin-bottom:36px}
+  .photo-circle{width:160px;height:160px;border-radius:50%;flex-shrink:0;border:3px solid var(--rule);object-fit:cover}
+  .photo-name{font-family:'EB Garamond',Georgia,serif;font-size:1rem;font-weight:500;color:var(--navy);line-height:1.2;margin-bottom:3px}
+  .photo-title{font-size:.73rem;color:var(--muted);line-height:1.5}
+  .photo-title span{color:var(--gold)}
+  .profile-label{font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+  .stats-grid{display:grid;grid-template-columns:1fr 1fr;margin-bottom:32px}
+  .stat-cell{padding:20px 16px;border:1px solid var(--rule);margin:-1px -1px 0 0}
+  .stat-n{font-family:'EB Garamond',Georgia,serif;font-size:2.2rem;font-weight:300;color:var(--navy);line-height:1;margin-bottom:4px}
+  .stat-l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+  .spec-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:.84rem;color:var(--slate)}
+  .spec-item:first-of-type{border-top:1px solid var(--rule)}
+  .spec-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+  /* SECTIONS */
+  section{padding:80px 40px}
+  .inner{max-width:960px;margin:0 auto}
+  .eyebrow{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .eyebrow-lt{color:rgba(154,124,63,.9)}
+  h2{font-family:'EB Garamond',Georgia,serif;font-size:clamp(1.6rem,2.4vw,2.3rem);font-weight:400;color:var(--navy);line-height:1.2;margin-bottom:12px}
+  h2.lt{color:#fff}
+  .lead{font-size:.89rem;color:var(--muted);max-width:520px;margin-bottom:48px;line-height:1.85}
+  .lead.lt{color:rgba(255,255,255,.5)}
+
+  /* FOCUS */
+  #focus{background:#fff}
+  .focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:48px}
+  .focus-card{background:#fff;padding:32px 24px;transition:background .2s}
+  .focus-card:hover{background:var(--fog)}
+  .focus-num{font-family:'EB Garamond',Georgia,serif;font-size:.96rem;color:var(--gold);margin-bottom:16px}
+  .focus-card h3{font-family:'EB Garamond',Georgia,serif;font-size:1.15rem;font-weight:500;color:var(--navy);margin-bottom:10px}
+  .focus-card p{font-size:.83rem;color:var(--muted);line-height:1.8}
+  .scope-box{border:1px solid var(--rule);padding:36px 40px;display:grid;grid-template-columns:180px 1fr;gap:36px}
+  .scope-label{font-family:'EB Garamond',Georgia,serif;font-size:1.25rem;font-weight:400;color:var(--navy);line-height:1.3}
+  .scope-items{display:grid;grid-template-columns:1fr 1fr}
+  .scope-item{padding:8px 0 8px 12px;border-left:2px solid transparent;border-bottom:1px solid var(--fog);font-size:.80rem;color:var(--muted);transition:border-left-color .2s,color .2s}
+  .scope-item:hover{border-left-color:var(--gold);color:var(--navy)}
+
+  /* SCHOLARSHIP */
+  #scholarship{background:var(--fog)}
+  .scholarship-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .pub-metric{display:flex;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px solid var(--rule)}
+  .pub-metric-n{font-family:'EB Garamond',Georgia,serif;font-size:1.8rem;font-weight:300;color:var(--navy);min-width:76px}
+  .pub-metric-l{font-size:.80rem;color:var(--muted)}
+  .reviewer-note{margin-top:28px;font-size:.78rem;color:var(--muted);line-height:1.85;font-style:italic}
+  .pubs-label{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .pub-item{padding:13px 0;border-bottom:1px solid var(--rule);font-size:.80rem;color:var(--muted);line-height:1.75}
+  .pub-item:last-child{border-bottom:none}
+  .pub-journal{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:3px}
+  .pub-title{color:var(--navy);font-weight:400;margin-bottom:2px}
+  .pub-title a{color:var(--navy);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:2px;transition:text-decoration-color .2s}
+  .pub-title a:hover{text-decoration-color:var(--gold)}
+
+  /* MEDICO-LEGAL */
+  #medlegal{background:#fff}
+  .medlegal-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .ml-group{margin-bottom:36px}
+  .ml-group h3{font-family:'EB Garamond',Georgia,serif;font-size:1rem;font-weight:500;color:var(--navy);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+  .ml-item{padding:10px 0;border-bottom:1px solid var(--fog);font-size:.83rem;color:var(--muted);display:flex;gap:12px;align-items:flex-start}
+  .ml-item:last-child{border-bottom:none}
+  .ml-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:7px}
+  .ml-stat-box{border:1px solid var(--rule);padding:36px 32px}
+  .ml-stat-n{font-family:'EB Garamond',Georgia,serif;font-size:2.8rem;font-weight:300;color:var(--navy);line-height:1;margin-bottom:4px}
+  .ml-stat-l{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin-bottom:28px}
+  .ml-note{font-size:.83rem;color:var(--muted);line-height:1.85;margin-top:8px;border-top:1px solid var(--rule);padding-top:24px}
+
+  /* APPOINTMENTS */
+  #appointments{background:var(--fog)}
+  .appts-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+  .appt-group+.appt-group{margin-top:36px}
+  .appt-group h3{font-family:'EB Garamond',Georgia,serif;font-size:1rem;font-weight:500;color:var(--navy);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+  .appt-item{padding:11px 0;border-bottom:1px solid rgba(221,216,208,.5);font-size:.83rem}
+  .appt-item:last-child{border-bottom:none}
+  .appt-year{font-size:.66rem;text-transform:uppercase;letter-spacing:.10em;color:var(--gold);margin-bottom:2px}
+  .appt-role{color:var(--navy);font-weight:400}
+  .appt-org{color:var(--muted);font-size:.78rem}
+
+  /* CONTACT */
+  #contact{background:var(--navy)}
+  .contact-grid{display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:start}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px}
+  .form-group{margin-bottom:14px}
+  .form-group label{display:block;font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:4px}
+  .form-group input,.form-group textarea,.form-group select{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,.18);color:#fff;padding:8px 0;font-family:'Jost',sans-serif;font-size:.86rem;font-weight:300;outline:none;border-radius:0;appearance:none;transition:border-bottom-color .2s}
+  .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.2)}
+  .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-bottom-color:var(--goldlt)}
+  .form-group select option{background:var(--navy);color:#fff}
+  .form-group textarea{height:88px;resize:none}
+  .form-btn{background:transparent;border:1px solid rgba(154,124,63,.5);color:var(--goldlt);padding:10px 28px;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;width:100%;transition:background .2s,border-color .2s}
+  .form-btn:hover{background:rgba(154,124,63,.1);border-color:var(--goldlt)}
+  .form-success{display:none;margin-top:12px;font-size:.80rem;color:var(--goldlt)}
+  .contact-detail{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+  .contact-detail:first-child{padding-top:0}
+  .cd-label{font-size:.61rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+  .cd-value{font-size:.86rem;color:rgba(255,255,255,.63)}
+  .cd-value a{color:rgba(255,255,255,.63);text-decoration:none;transition:color .2s}
+  .cd-value a:hover{color:var(--goldlt)}
+  .disclaimer{margin-top:24px;padding:18px;border:1px solid rgba(154,124,63,.2)}
+  .disclaimer p{font-size:.78rem;color:rgba(255,255,255,.36);line-height:1.8}
+  .disclaimer p+p{margin-top:8px}
+  .disclaimer p.redirect{color:rgba(255,255,255,.26);font-style:italic}
+
+  /* FOOTER */
+  footer{background:#08121e;padding:22px 40px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.04)}
+  .footer-name{font-family:'EB Garamond',Georgia,serif;font-size:.86rem;color:rgba(255,255,255,.28)}
+  .footer-contact{font-size:.68rem;color:rgba(255,255,255,.18)}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.visible{opacity:1;transform:none}
+
+  /* MOBILE */
+  @media(max-width:900px){
+    nav{padding:0 20px}
+    .nav-links{display:none}
+    .hero{grid-template-columns:1fr}
+    .hero-right{display:flex;padding:40px 24px}
+    .hero-left{padding:56px 24px;min-height:100vh}
+    section{padding:56px 24px}
+    .focus-grid{grid-template-columns:1fr}
+    .scope-box{grid-template-columns:1fr;gap:20px}
+    .scope-items{grid-template-columns:1fr}
+    .scholarship-grid,.medlegal-grid,.appts-grid,.contact-grid{grid-template-columns:1fr}
+    .form-row{grid-template-columns:1fr}
+    footer{flex-direction:column;gap:6px;text-align:center;padding:20px 24px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-name">Christopher W. Ryan, MD</a>
+  <ul class="nav-links">
+    <li><a href="#focus">Clinical Focus</a></li>
+    <li><a href="#areas">Consultation Areas</a></li>
+    <li><a href="#scholarship">Scholarship</a></li>
+    <li><a href="#medlegal">Experience</a></li>
+    <li><a href="#appointments">Academic CV</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Medical Oncology · Portland, Oregon</p>
+    <h1>Christopher W.<br>Ryan, MD</h1>
+    <p class="hero-creds">
+      Professor of Medicine<br>
+      OHSU Knight Cancer Institute<br>
+      Executive Officer, SWOG Cancer Research Network (2013–2026)
+    </p>
+    <div class="hero-rule"></div>
+    <p class="hero-desc">Subspecialty oncologist with over 25 years of clinical and investigational experience in sarcoma and genitourinary cancers. Available for consultation in medical-legal matters involving oncology, including cancer diagnosis, treatment, causation analysis, and prognosis.</p>
+    <a href="#contact" class="hero-cta">Professional Inquiry</a>
+  </div>
+  <div class="hero-right">
+    <div class="photo-row">
+      <img src="photo.jpg" class="photo-circle" alt="Christopher W. Ryan, MD">
+      <div>
+        <div class="photo-name">Christopher W. Ryan, MD</div>
+        <div class="photo-title">Professor of Medicine<br><span>OHSU Knight Cancer Institute</span></div>
+      </div>
+    </div>
+    <p class="profile-label">Academic Profile</p>
+    <div class="stats-grid">
+      <div class="stat-cell"><div class="stat-n">53</div><div class="stat-l">H-Index</div></div>
+      <div class="stat-cell"><div class="stat-n">12,400+</div><div class="stat-l">Citations</div></div>
+      <div class="stat-cell"><div class="stat-n">200+</div><div class="stat-l">Publications &amp; Chapters</div></div>
+      <div class="stat-cell"><div class="stat-n">25+</div><div class="stat-l">Years Practice</div></div>
+    </div>
+    <div class="spec-item"><div class="spec-dot"></div>Soft Tissue &amp; Bone Sarcoma</div>
+    <div class="spec-item"><div class="spec-dot"></div>Renal Cell Carcinoma</div>
+    <div class="spec-item"><div class="spec-dot"></div>Prostate, Bladder &amp; Testicular Cancer</div>
+    <div class="spec-item"><div class="spec-dot"></div>Oncology Clinical Trials</div>
+    <div class="spec-item"><div class="spec-dot"></div>Quantitative Imaging Response Assessment</div>
+  </div>
+</div>
+
+<!-- CLINICAL FOCUS -->
+<section id="focus">
+  <div class="inner">
+    <p class="eyebrow reveal">Clinical Focus</p>
+    <h2 class="reveal">Subspecialty Expertise</h2>
+    <p class="lead reveal">Three decades of clinical practice and investigational work concentrated in two disease areas.</p>
+    <div class="focus-grid">
+      <div class="focus-card reveal">
+        <div class="focus-num">01</div>
+        <h3>Sarcoma</h3>
+        <p>Soft tissue and bone sarcomas including osteosarcoma, Ewing sarcoma, GIST, liposarcoma, leiomyosarcoma, chondrosarcoma, angiosarcoma, TGCT, and rhabdomyosarcoma. Extensive experience with multimodality treatment — chemotherapy, preoperative chemoradiation, and surgical coordination.</p>
+      </div>
+      <div class="focus-card reveal">
+        <div class="focus-num">02</div>
+        <h3>Genitourinary Oncology</h3>
+        <p>Renal cell carcinoma, prostate cancer, bladder cancer, and testicular malignancies. Depth across all treatment modalities including targeted therapy, immunotherapy, hormonal agents, and cytotoxic chemotherapy in the metastatic and localized settings.</p>
+      </div>
+      <div class="focus-card reveal">
+        <div class="focus-num">03</div>
+        <h3>Clinical Trial Design &amp; Conduct</h3>
+        <p>As Executive Officer of SWOG and former CALGB executive, extensive familiarity with cooperative group research, regulatory standards, protocol development, informed consent requirements, and investigational drug development across phase I–III settings.</p>
+      </div>
+    </div>
+    <div class="scope-box reveal">
+      <div class="scope-label">Consultation<br>Scope</div>
+      <div class="scope-items">
+        <div class="scope-item">Diagnosis and staging evaluation</div>
+        <div class="scope-item">Treatment selection &amp; sequencing</div>
+        <div class="scope-item">Chemotherapy dosing &amp; toxicity</div>
+        <div class="scope-item">Standard of care at time of treatment</div>
+        <div class="scope-item">Clinical trial eligibility &amp; conduct</div>
+        <div class="scope-item">Informed consent adequacy</div>
+        <div class="scope-item">Multidisciplinary team coordination</div>
+        <div class="scope-item">Targeted therapy &amp; immunotherapy use</div>
+        <div class="scope-item">Pathologic and imaging interpretation</div>
+        <div class="scope-item">Prognosis &amp; natural history</div>
+        <div class="scope-item">Referral patterns &amp; access to care</div>
+        <div class="scope-item">Published guideline review (NCCN, ASCO, ESMO)</div>
+        <div class="scope-item">Medical malpractice matters</div>
+        <div class="scope-item">Workers' compensation matters</div>
+        <div class="scope-item">Product liability &amp; MDL matters</div>
+        <div class="scope-item">Causation &amp; standard-of-care opinions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS OF CONSULTATION -->
+<section id="areas" style="background:var(--fog);padding:80px 40px;">
+  <div class="inner">
+    <p class="eyebrow reveal">What Attorneys Come to Dr. Ryan For</p>
+    <h2 class="reveal">Areas of Consultation</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:40px;" class="reveal">
+      <div style="background:var(--fog);padding:28px 24px;">
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:.96rem;color:var(--gold);margin-bottom:10px;">01</div>
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:500;color:var(--navy);margin-bottom:8px;">Delayed Diagnosis</div>
+        <div style="font-size:.81rem;color:var(--muted);line-height:1.8;">Assessment of whether cancer diagnosis and staging met the standard of care, including evaluation of workup, referral, and treatment timelines.</div>
+      </div>
+      <div style="background:var(--fog);padding:28px 24px;">
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:.96rem;color:var(--gold);margin-bottom:10px;">02</div>
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:500;color:var(--navy);margin-bottom:8px;">Oncology Standard of Care</div>
+        <div style="font-size:.81rem;color:var(--muted);line-height:1.8;">Review of treatment selection, sequencing, dosing, and toxicity management against published guidelines and prevailing practice at the time of care.</div>
+      </div>
+      <div style="background:var(--fog);padding:28px 24px;">
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:.96rem;color:var(--gold);margin-bottom:10px;">03</div>
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:500;color:var(--navy);margin-bottom:8px;">Causation in Toxic Exposure</div>
+        <div style="font-size:.81rem;color:var(--muted);line-height:1.8;">General and specific causation analysis in product liability matters, including epidemiologic literature review, IARC monograph evaluation, and competing risk factor assessment.</div>
+      </div>
+      <div style="background:var(--fog);padding:28px 24px;">
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:.96rem;color:var(--gold);margin-bottom:10px;">04</div>
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:500;color:var(--navy);margin-bottom:8px;">Prognosis &amp; Natural History</div>
+        <div style="font-size:.81rem;color:var(--muted);line-height:1.8;">Opinion on expected disease course, life expectancy, and impact of treatment decisions on long-term outcomes in sarcoma and genitourinary cancers.</div>
+      </div>
+      <div style="background:var(--fog);padding:28px 24px;">
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:.96rem;color:var(--gold);margin-bottom:10px;">05</div>
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:500;color:var(--navy);margin-bottom:8px;">Clinical Trial Conduct</div>
+        <div style="font-size:.81rem;color:var(--muted);line-height:1.8;">Review of protocol adherence, eligibility criteria, informed consent adequacy, and investigational drug administration in cooperative group and industry-sponsored trials.</div>
+      </div>
+      <div style="background:var(--fog);padding:28px 24px;">
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:.96rem;color:var(--gold);margin-bottom:10px;">06</div>
+        <div style="font-family:'EB Garamond',Georgia,serif;font-size:1.05rem;font-weight:500;color:var(--navy);margin-bottom:8px;">Multi-District Litigation</div>
+        <div style="font-size:.81rem;color:var(--muted);line-height:1.8;">Experience supporting defense teams in MDL proceedings involving large-scale cancer causation claims, including individual case review and general causation reporting.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOLARSHIP -->
+<section id="scholarship">
+  <div class="inner">
+    <p class="eyebrow reveal">Research &amp; Publications</p>
+    <h2 class="reveal">Scholarship</h2>
+    <p class="lead reveal">Active investigator and author across sarcoma, genitourinary oncology, and oncology clinical trial methodology.</p>
+    <div class="scholarship-grid">
+      <div>
+        <div class="pub-metric reveal"><div class="pub-metric-n">53</div><div class="pub-metric-l">H-index (Google Scholar, October 2025)</div></div>
+        <div class="pub-metric reveal"><div class="pub-metric-n">132</div><div class="pub-metric-l">i10-index</div></div>
+        <div class="pub-metric reveal"><div class="pub-metric-n">12,400+</div><div class="pub-metric-l">Total citations</div></div>
+        <div class="pub-metric reveal"><div class="pub-metric-n">109+</div><div class="pub-metric-l">Peer-reviewed publications</div></div>
+        <div class="pub-metric reveal"><div class="pub-metric-n">12+</div><div class="pub-metric-l">Book chapters</div></div>
+        <div class="pub-metric reveal"><div class="pub-metric-n">17+</div><div class="pub-metric-l">Reviews &amp; editorials</div></div>
+        <p class="reviewer-note reveal">Editorial board member, <em>Critical Reviews in Oncology/Hematology</em> and <em>Urology</em>. Ad hoc reviewer for <em>Journal of Clinical Oncology</em>, <em>The Lancet Oncology</em>, <em>New England Journal of Medicine</em>, and <em>Clinical Cancer Research</em>, among others.</p>
+      </div>
+      <div>
+        <p class="pubs-label reveal">Selected Publications</p>
+        <div class="pub-item reveal">
+          <div class="pub-journal">The Lancet · 2023</div>
+          <div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/37524096/" target="_blank">Adjuvant everolimus after surgery for renal cell carcinoma (EVEREST): a double-blind, placebo-controlled, randomised, phase 3 trial.</a></div>
+          Ryan CW, Tangen CM, Heath EI, et al.
+        </div>
+        <div class="pub-item reveal">
+          <div class="pub-journal">The Lancet · 2019</div>
+          <div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/31229240/" target="_blank">Pexidartinib versus placebo for advanced tenosynovial giant cell tumour (ENLIVEN): a randomised phase 3 trial.</a></div>
+          Tap WD, Gelderblom H, … Ryan CW, et al.
+        </div>
+        <div class="pub-item reveal">
+          <div class="pub-journal">J Clin Oncol · 2019</div>
+          <div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/31013172/" target="_blank">Randomized Double-Blind Phase II Study of Regorafenib in Patients With Metastatic Osteosarcoma.</a></div>
+          Davis LE, Bolejack V, Ryan CW, et al.
+        </div>
+        <div class="pub-item reveal">
+          <div class="pub-journal">JAMA Oncology · 2017</div>
+          <div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/28196207/" target="_blank">Correlation of Long-term Results of Imatinib in Advanced GIST with Next-Generation Sequencing Results: SWOG S0033.</a></div>
+          Heinrich M, Rankin C, … Ryan CW, et al.
+        </div>
+        <div class="pub-item reveal">
+          <div class="pub-journal">J Clin Oncol · 2016</div>
+          <div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/27621408/" target="_blank">PICASSO III: A Phase III, Placebo-Controlled Study of Doxorubicin With or Without Palifosfamide in Metastatic Soft Tissue Sarcoma.</a></div>
+          Ryan CW, Merimsky O, Agulnik M, et al.
+        </div>
+
+        <div style="margin-top:36px;">
+          <p class="pubs-label reveal">UpToDate — Contributing Author</p>
+          <p style="font-size:.78rem;color:var(--muted);line-height:1.85;font-style:italic;margin-bottom:16px;" class="reveal">UpToDate is a peer-reviewed clinical decision-support resource used by physicians worldwide and frequently referenced in medical-legal proceedings as a benchmark for standard of care. Authorship reflects recognized subspecialty authority.</p>
+          <div class="pub-item reveal">
+            <div class="pub-journal">UpToDate · Soft Tissue Sarcoma</div>
+            <div class="pub-title"><a href="https://www.uptodate.com/contents/clinical-presentation-histopathology-diagnostic-evaluation-and-staging-of-soft-tissue-sarcoma" target="_blank">Clinical Presentation, Diagnostic Evaluation, and Staging of Soft Tissue Sarcoma.</a></div>
+            Meyer JM, Ryan CW.
+          </div>
+          <div class="pub-item reveal">
+            <div class="pub-journal">UpToDate · Soft Tissue Sarcoma</div>
+            <div class="pub-title"><a href="https://www.uptodate.com/contents/overview-of-multimodality-treatment-for-primary-soft-tissue-sarcoma-of-the-extremities-and-chest-wall" target="_blank">Overview of Multimodality Treatment for Primary Soft Tissue Sarcoma of the Extremities and Chest Wall.</a></div>
+            DeLaney TF, Gebhardt MC, Ryan CW.
+          </div>
+          <div class="pub-item reveal">
+            <div class="pub-journal">UpToDate · Soft Tissue Sarcoma</div>
+            <div class="pub-title"><a href="https://www.uptodate.com/contents/treatment-of-locally-recurrent-and-unresectable-locally-advanced-soft-tissue-sarcoma-of-the-extremities" target="_blank">Treatment of Locally Recurrent and Unresectable, Locally Advanced Soft Tissue Sarcoma of the Extremities.</a></div>
+            DeLaney TF, Gebhardt MC, Ryan CW.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDICO-LEGAL EXPERIENCE -->
+<section id="medlegal">
+  <div class="inner">
+    <p class="eyebrow reveal">Medico-Legal Experience</p>
+    <h2 class="reveal">Expert Consultation &amp; Testimony</h2>
+    <p class="lead reveal">Extensive experience providing medical-legal consultation in oncology matters on behalf of both plaintiff and defense clients, with particular depth in product liability defense.</p>
+    <div class="medlegal-grid">
+      <div>
+        <div class="ml-group reveal">
+          <h3>Matter Types</h3>
+          <div class="ml-item"><div class="ml-dot"></div>Medical malpractice</div>
+          <div class="ml-item"><div class="ml-dot"></div>Workers' compensation</div>
+          <div class="ml-item"><div class="ml-dot"></div>Product liability, including multi-district litigation (MDL)</div>
+          <div class="ml-item"><div class="ml-dot"></div>General and specific causation analysis</div>
+          <div class="ml-item"><div class="ml-dot"></div>Standard-of-care opinion</div>
+        </div>
+        <div class="ml-group reveal">
+          <h3>Product Liability &amp; MDL</h3>
+          <div class="ml-item"><div class="ml-dot"></div>Defense experience in matters involving allegations of cancer causation on behalf of major corporate defendants</div>
+          <div class="ml-item"><div class="ml-dot"></div>Individual plaintiff case review with assessment of alternative and competing risk factors</div>
+          <div class="ml-item"><div class="ml-dot"></div>Critical review of epidemiologic literature, IARC monographs, and evaluations by other authoritative bodies</div>
+          <div class="ml-item"><div class="ml-dot"></div>Causation analysis in genitourinary malignancies, with experience in prostate, bladder, renal cell, and testicular cancer matters</div>
+          <div class="ml-item"><div class="ml-dot"></div>Available to provide causation opinions across his full clinical subspecialty, including sarcoma and genitourinary cancers</div>
+          <div class="ml-item"><div class="ml-dot"></div>Preparation of detailed written reports suitable for Daubert proceedings</div>
+        </div>
+        <div class="ml-group reveal">
+          <h3>Availability</h3>
+          <div class="ml-item"><div class="ml-dot"></div>Plaintiff and defense matters considered</div>
+          <div class="ml-item"><div class="ml-dot"></div>Experienced in deposition and trial testimony</div>
+          <div class="ml-item"><div class="ml-dot"></div>Available to travel nationwide</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <p style="font-size:.87rem;color:var(--muted);line-height:1.95;border-left:2px solid var(--gold);padding-left:20px;">Dr. Ryan has served as a medical expert in a range of medico-legal matters on behalf of both plaintiff and defense clients. His product liability work has included defense of major corporate defendants in multi-district litigation involving allegations of cancer causation. He is experienced in deposition and trial testimony, and is available to travel nationwide. Opinions are based on peer-reviewed medical literature, published clinical guidelines, and more than two decades of clinical oncology practice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPOINTMENTS -->
+<section id="appointments">
+  <div class="inner">
+    <p class="eyebrow reveal">Curriculum Vitae</p>
+    <h2 class="reveal">Academic Appointments &amp; Credentials</h2>
+    <p class="lead reveal">Full CV available for download below or upon request. <a href="ryan-cv.pdf" download style="color:var(--gold);text-decoration:underline;text-underline-offset:2px;">Download CV (PDF) ↓</a></p>
+    <div class="appts-grid">
+      <div class="reveal">
+        <div class="appt-group">
+          <h3>Academic Appointments</h3>
+          <div class="appt-item"><div class="appt-year">2014 – Present</div><div class="appt-role">Professor of Medicine</div><div class="appt-org">Division of Hematology &amp; Medical Oncology, OHSU Knight Cancer Institute</div></div>
+          <div class="appt-item"><div class="appt-year">2007 – 2014</div><div class="appt-role">Associate Professor</div><div class="appt-org">Oregon Health &amp; Science University</div></div>
+          <div class="appt-item"><div class="appt-year">2003 – 2007</div><div class="appt-role">Assistant Professor</div><div class="appt-org">Oregon Health &amp; Science University</div></div>
+          <div class="appt-item"><div class="appt-year">2000 – 2003</div><div class="appt-role">Instructor / Assistant Professor</div><div class="appt-org">University of Chicago, Hematology/Oncology</div></div>
+        </div>
+        <div class="appt-group">
+          <h3>Training</h3>
+          <div class="appt-item"><div class="appt-year">1997 – 2000</div><div class="appt-role">Fellowship, Hematology/Oncology</div><div class="appt-org">University of Chicago</div></div>
+          <div class="appt-item"><div class="appt-year">1994 – 1997</div><div class="appt-role">Residency, Internal Medicine</div><div class="appt-org">University of Chicago Hospitals</div></div>
+          <div class="appt-item"><div class="appt-year">1994</div><div class="appt-role">MD</div><div class="appt-org">SUNY Health Science Center at Syracuse</div></div>
+          <div class="appt-item"><div class="appt-year">1989</div><div class="appt-role">BA, Cell Biology</div><div class="appt-org">Cornell University</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="appt-group reveal">
+          <h3>Leadership</h3>
+          <div class="appt-item"><div class="appt-year">2013 – 2026</div><div class="appt-role">Executive Officer, SWOG Cancer Research Network</div></div>
+          <div class="appt-item"><div class="appt-year">2004 – Present</div><div class="appt-role">Institutional Principal Investigator, SWOG · OHSU</div></div>
+          <div class="appt-item"><div class="appt-year">2000 – 2003</div><div class="appt-role">Executive Officer, Cancer and Leukemia Group B (CALGB)</div></div>
+        </div>
+        <div class="appt-group reveal">
+          <h3>Certification &amp; Licensure</h3>
+          <div class="appt-item"><div class="appt-year">Recertified 2021</div><div class="appt-role">Diplomate, ABIM — Medical Oncology · No. 178306</div></div>
+          <div class="appt-item"><div class="appt-year">Active</div><div class="appt-role">Oregon Medical License (Active)</div></div>
+          <div class="appt-item"><div class="appt-year">Active</div><div class="appt-role">Idaho Medical License (Active)</div></div>
+        </div>
+        <div class="appt-group reveal">
+          <h3>Selected Honors</h3>
+          <div class="appt-item"><div class="appt-year">2009</div><div class="appt-role">NCI Clinical Investigator Team Leadership Award</div></div>
+          <div class="appt-item"><div class="appt-year">2012, 2015, 2016</div><div class="appt-role">OHSU Knight Cancer Institute Clinical Research Scholar</div></div>
+          <div class="appt-item"><div class="appt-year">2013</div><div class="appt-role">OHSU Chair's Award — Sarcoma Multidisciplinary Team</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="inner">
+    <p class="eyebrow eyebrow-lt reveal">Professional Inquiries</p>
+    <h2 class="lt reveal">Medical-Legal &amp; Professional Consultation</h2>
+    <p class="lead lt reveal">This site is intended for attorneys, insurers, and healthcare organizations seeking professional consultation. For clinical care inquiries, please contact OHSU Knight Cancer Institute directly.</p>
+    <div class="contact-grid">
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group"><label>Name</label><input type="text" placeholder="Your name" required></div>
+          <div class="form-group"><label>Organization</label><input type="text" placeholder="Firm or institution"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="(555) 000-0000"></div>
+        </div>
+        <div class="form-group">
+          <label>Nature of Inquiry</label>
+          <select>
+            <option value="" disabled selected>Select a category</option>
+            <option>Sarcoma case review</option>
+            <option>Renal cell carcinoma case review</option>
+            <option>Prostate cancer case review</option>
+            <option>Bladder cancer case review</option>
+            <option>Testicular cancer case review</option>
+            <option>Product liability / MDL matter</option>
+            <option>Clinical trial matter</option>
+            <option>Workers' compensation matter</option>
+            <option>Insurance or coverage matter</option>
+            <option>Other oncology matter</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Brief Description</label><textarea placeholder="Please describe the matter briefly and how I may be of assistance..."></textarea></div>
+        <button type="submit" class="form-btn">Submit Inquiry</button>
+        <p class="form-success" id="formSuccess">Thank you. Your inquiry has been received and will be responded to within two business days.</p>
+      </form>
+      <div class="reveal">
+        <div class="contact-detail"><div class="cd-label">Email</div><div class="cd-value"><a href="mailto:cryan@drryanoncology.org">cryan&#64;drryanoncology.org</a></div></div>
+        <div class="contact-detail"><div class="cd-label">Phone</div><div class="cd-value"><a href="tel:5035938840">(503) 593-8840</a></div></div>
+        <div class="contact-detail"><div class="cd-label">Location</div><div class="cd-value">Portland, Oregon<br>Available for engagements nationwide</div></div>
+        <div class="contact-detail"><div class="cd-label">Curriculum Vitae</div><div class="cd-value"><a href="ryan-cv.pdf" download>Download CV (PDF) ↓</a></div></div>
+        <div class="contact-detail"><div class="cd-label">LinkedIn</div><div class="cd-value"><a href="https://www.linkedin.com/in/christopher-ryan-oncology/" target="_blank">View Profile →</a></div></div>
+        <div class="disclaimer">
+          <p>Both plaintiff and defense matters considered. Conflicts screened prior to engagement.</p>
+          <p>Retainer and fee schedule provided upon initial inquiry.</p>
+          <p class="redirect">For clinical care, please contact OHSU Knight Cancer Institute directly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-name">Christopher W. Ryan, MD</span>
+  <span class="footer-contact">Portland, Oregon · cryan&#64;drryanoncology.org</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    document.querySelectorAll('section[id]').forEach(s => { if (scrollY >= s.offsetTop - 80) cur = s.id; });
+    document.querySelectorAll('.nav-links a').forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
+  });
+  function handleSubmit(e) {
+    e.preventDefault();
+    const msg = document.getElementById('formSuccess');
+    msg.style.display = 'block';
+    e.target.reset();
+    setTimeout(() => msg.style.display = 'none', 7000);
+  }
+</script>
+</body>
+</html>

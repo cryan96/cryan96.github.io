@@ -474,16 +474,16 @@
     <div class="contact-grid">
       <form id="contactForm" action="https://formspree.io/f/xzdjrprb" method="POST" onsubmit="handleSubmit(event)">
         <div class="form-row">
-          <div class="form-group"><label>Name</label><input type="text" placeholder="Your name" required></div>
-          <div class="form-group"><label>Organization</label><input type="text" placeholder="Firm or institution"></div>
+          <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="form-group"><label>Organization</label><input type="text" name="organization" placeholder="Firm or institution"></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
-          <div class="form-group"><label>Phone</label><input type="tel" placeholder="(555) 000-0000"></div>
+          <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
+          <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="(555) 000-0000"></div>
         </div>
         <div class="form-group">
           <label>Nature of Inquiry</label>
-          <select>
+          <select name="inquiry_type">
             <option value="" disabled selected>Select a category</option>
             <option>Sarcoma case review</option>
             <option>Renal cell carcinoma case review</option>
@@ -497,7 +497,7 @@
             <option>Other oncology matter</option>
           </select>
         </div>
-        <div class="form-group"><label>Brief Description</label><textarea placeholder="Please describe the matter briefly and how I may be of assistance..."></textarea></div>
+        <div class="form-group"><label>Brief Description</label><textarea name="description" placeholder="Please describe the matter briefly and how I may be of assistance..."></textarea></div>
         <button type="submit" class="form-btn">Submit Inquiry</button>
         <p class="form-success" id="formSuccess">Thank you. Your inquiry has been received and will be responded to within two business days.</p>
       </form>
